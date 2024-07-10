@@ -124,3 +124,4 @@ Merci d’utiliser notre application scolaire!
 Définition Merise : 
 
 Merise est une méthode de conception de systèmes d’information qui permet de modéliser et structurer les données d’une manière cohérente et logique. Elle est largement utilisée pour le développement de bases de données relationnelles. La méthode Merise se distingue par l’utilisation de plusieurs types de diagrammes pour représenter différentes perspectives des données et des traitements. Parmi ces diagrammes, les plus importants sont le Modèle Conceptuel de Données (MCD), le Modèle Logique de Données (MLD), et le Modèle Physique de Données (MPD).
+
