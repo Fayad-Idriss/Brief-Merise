@@ -1,4 +1,4 @@
-Introduction
+# Introduction
 
 Bienvenue dans notre projet d’application scolaire! Cette application est conçue pour faciliter la gestion des formations et des modules au sein d’un établissement scolaire. Les élèves peuvent suivre les modules qu’ils souhaitent et doivent valider tous les modules d’une formation pour la compléter. Les modules sont créés et gérés par des professeurs.
 
@@ -12,7 +12,7 @@ Table des matières
 	6.	Licence
 	7.	Contact
 
-Fonctionnalités
+# Fonctionnalités
 
 	•	Gestion des Formations et Modules :
 	•	Création de formations comprenant plusieurs modules.
@@ -24,7 +24,7 @@ Fonctionnalités
 	•	Suivi de la progression des élèves.
 	•	Statistiques et rapports sur l’avancement des formations.
 
-Technologies Utilisées
+# Technologies Utilisées
 
 	•	Frontend :
 	•	HTML, CSS, JavaScript
@@ -40,12 +40,12 @@ Technologies Utilisées
 
 # Installation 
 
-	1.	Cloner le dépôt :
+##   Cloner le dépôt :
 
 - git clone https://github.com/username/repository.git
 - cd repository
 
-	2.	Installer les dépendances :
+##	 nstaller les dépendances :
 
 Pour le front
 
@@ -57,11 +57,11 @@ Pour le back
 - cd backend
 - npm install
 
-    3.	Configurer la base de données :
+##  	Configurer la base de données :
 
 - Assurez-vous que MongoDB est installé et en cours d’exécution sur votre machine. Modifiez les configurations de connexion à la base      de données dans le fichier backend/config/db.js.
 
-	4.	Démarrer l’application :
+##	    Démarrer l’application :
 
 Démarrer le backend :
 
@@ -73,11 +73,11 @@ Démarrer le frontend :
 - cd frontend
 - npm start
 
-	5.	Accéder à l’application :
+##	Accéder à l’application :
 
 Ouvrez votre navigateur et rendez-vous sur http://localhost:3000.
 
-Utilisation
+# Utilisation
 
 Pour les Professeurs :
 
@@ -95,7 +95,7 @@ Pour les Élèves :
 	•	Accédez à vos formations inscrites et commencez les modules.
 	•	Une fois tous les modules complétés, la formation sera automatiquement validée.
 
-Contribution
+# Contribution
 
 Nous accueillons avec plaisir les contributions pour améliorer cette application. Veuillez suivre ces étapes pour contribuer :
 
@@ -107,7 +107,7 @@ Nous accueillons avec plaisir les contributions pour améliorer cette applicatio
 
 Merci de consulter notre fichier CONTRIBUTING.md pour plus de détails sur notre processus de contribution.
 
-Licence
+# Licence
 
 Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
 
