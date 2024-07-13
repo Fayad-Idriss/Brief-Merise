@@ -2,25 +2,14 @@
 
 
 
-## Visite de l'application 
+## Visiteur. 
 
 - Un visiteur peut visiter l'application sans s'inscrire.
-- Un visiteur peut s'inscire sur l'application et devient alors un apprenant et reçois un numéro d'inscription unique.
+- Un visiteur peut s'inscire sur l'application et devient alors un apprenant sois un formateur et reçois un numéro d'inscription unique.
+- Un visiteur peut rejoindre l'interface de connexion sans ce connecter.
 
 
-## Connexion 
-
-- Un apprennant peut se connecter via un formulaire de connexion.
-- Un apprennant doit renseigner son email et son mot de passe afin de s'authentifier.
-- Si l'apprenant oublie sont mot de passe, il peut cliquer sur mot de passe oublier  qui lui permettra de recevoir un mail de réinitialisation.
-- L'apprenant aura le doit à 8 essais avant le blocage du compte.
-- Le Formateur peut se connecter via un formulaire de connexion.
-- Le Formateur doit renseigner son email et son mot de passe afin de s'authentifier.
-- Si le formateur oublie sont mot de passe, il peut cliquer sur mot de passe oublier  qui lui permettra de recevoir un mail de réinitialisation.
-- Le formateur aura le doit à 8 essais avant le blocage du compte.
-
-
-## Gestion des modules
+## Modules
 
 - Chaque module sera caractérisé par un numéro de module.
 - Un module aura 4 états "Non fais", "En cour", "Valider", "Echec"
@@ -40,6 +29,10 @@
 
 ## Apprenant
 
+- Un apprennant peut se connecter via un formulaire de connexion.
+- Un apprennant doit renseigner son email et son mot de passe afin de s'authentifier.
+- Si l'apprenant oublie sont mot de passe, il peut cliquer sur mot de passe oublier  qui lui permettra de recevoir un mail de réinitialisation.
+- L'apprenant aura le doit à 8 essais avant le blocage du compte.
 - Un apprenant peut s'inscrire à une ou plusieurs formations.
 - Un apprenant peut s'inscrire à un ou plusieurs modules.
 - Un apprenant peut ne pas s'inscrire à un module si il avais déjà était valider.
@@ -50,6 +43,10 @@
 
 ## Formateur 
 
+- Le Formateur peut se connecter via un formulaire de connexion.
+- Le Formateur doit renseigner son email et son mot de passe afin de s'authentifier.
+- Si le formateur oublie sont mot de passe, il peut cliquer sur mot de passe oublier  qui lui permettra de recevoir un mail de réinitialisation.
+- Le formateur aura le doit à 8 essais avant le blocage du compte.
 - Un formateur peut créer un module.
 - Un formateur peut modifier un module.
 - Un formateur peut supprimer un module.
@@ -57,7 +54,7 @@
 - Un formateur peut supprimer une formation.
 - Un formateur sera charger de la correction des modules.
 - Un formateur peut valider une formation si tous les modules ont étais valider.
-- Un Formateur peut supprimer sont compte
+- Un Formateur peut supprimer son compte
 
 
 ## Admin
@@ -66,6 +63,10 @@
 - Un admin aura le pouvoir de supprimer un compte Formateur.
 - Un admin aura le pouvoir de supprimer une formation.
 - Un admin aura le pouvoir de supprimer un module.
+- Un admin peut ajouter un apprenant à la liste des apprenants
+- Un admin peut ajouter un formateur à la liste des formateurs 
+- Un admin peut ajouter une formation.
+- Un admin peut ajouter un module.
 
 
 
