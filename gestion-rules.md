@@ -1,50 +1,75 @@
-# Règles de Gestion
+# Règles de gestion
 
-1. Création et Gestion des Formations
 
-	1.	Seuls les professeurs peuvent créer des formations :
-	•	Les professeurs doivent être authentifiés pour accéder à la fonctionnalité de création de formations.
-	•	Chaque formation doit avoir un titre unique, une description détaillée, et un ensemble de modules associés.
-	2.	Publication automatique des formations :
-	•	Une fois créées, les formations sont immédiatement accessibles aux élèves sans validation supplémentaire.
 
-2. Gestion des Modules
+## Visite de l'application 
 
-	1.	Les professeurs sont responsables de la création et de la mise à jour des modules :
-	•	Chaque module doit avoir un titre, une description, un contenu pédagogique, et des critères de validation.
-	•	Les modules peuvent être ajoutés, modifiés ou supprimés par les professeurs responsables de la formation correspondante.
-	2.	Les modules doivent être associés à une formation :
-	•	Un module ne peut exister indépendamment ; il doit toujours être lié à une formation spécifique.
+- Un visiteur peut visiter l'application sans s'inscrire.
+- Un visiteur peut s'inscire sur l'application et devient alors un apprenant et reçois un numéro d'inscription unique.
 
-3. Inscription et Suivi des Modules par les Élèves
 
-	1.	Les élèves peuvent s’inscrire à une ou plusieurs formations :
-	•	Une fois inscrits, les élèves peuvent accéder aux modules de la formation.
-	2.	Progression et validation des modules :
-	•	Les élèves doivent suivre le contenu pédagogique de chaque module et répondre aux critères de validation définis (par exemple, réussir un quiz ou soumettre un devoir).
-	•	Un module est automatiquement validé lorsque l’élève a satisfait à tous les critères de validation.
+## Connexion 
 
-4. Validation des Formations
+- Un apprennant peut se connecter via un formulaire de connexion.
+- Un apprennant doit renseigner son email et son mot de passe afin de s'authentifier.
+- Si l'apprenant oublie sont mot de passe, il peut cliquer sur mot de passe oublier  qui lui permettra de recevoir un mail de réinitialisation.
+- L'apprenant aura le doit à 8 essais avant le blocage du compte.
+- Le Formateur peut se connecter via un formulaire de connexion.
+- Le Formateur doit renseigner son email et son mot de passe afin de s'authentifier.
+- Si le formateur oublie sont mot de passe, il peut cliquer sur mot de passe oublier  qui lui permettra de recevoir un mail de réinitialisation.
+- Le formateur aura le doit à 8 essais avant le blocage du compte.
 
-	1.	Validation automatique des formations :
-	•	Une formation est automatiquement validée lorsque tous les modules associés sont complétés avec succès par l’élève.
-	2.	Certificat de complétion :
-	•	Les élèves reçoivent automatiquement un certificat de complétion une fois la formation validée. Ce certificat peut être téléchargé et imprimé.
 
-5. Rôles et Permissions
+## Gestion des modules
 
-	1.	Professeur :
-	•	Crée et gère les formations et les modules.
-	•	Peut consulter la progression des élèves inscrits à ses formations.
-	2.	Élève :
-	•	S’inscrit aux formations, suit les modules, et valide les formations.
-	•	Peut consulter sa progression et télécharger les certificats de complétion.
+- Chaque module sera caractérisé par un numéro de module.
+- Un module aura 4 états "Non fais", "En cour", "Valider", "Echec"
+- Chaque module pourra contenir un text et/ou une vidéo.
+- Un module peut faire partie de une ou plusieurs formation.
+- Un module peut contenir des tags.
 
-6. Notifications et Rapports
 
-	1.	Notifications :
-	•	Les élèves reçoivent des notifications pour les nouveaux modules, les échéances importantes, et la validation des formations.
-	•	Les professeurs reçoivent des notifications lorsque des élèves complètent leurs modules ou lorsqu’une formation est validée.
-	2.	Rapports :
-	•	Les professeurs peuvent générer des rapports sur la progression des élèves et l’état des formations.
-	•	Les élèves peuvent accéder à des rapports détaillés sur leur propre performance et progression.
+
+## Formation 
+
+- Chaque formation sera caractérisé par un numéro de module.
+- Une formation aura 4 états "Non fais", "En cour", "Valider", "Echec"
+- Une formation à besoin que tout ses modules sois valider pour être terminer. 
+- Une formation peut contenir un ou plusieurs module.
+
+
+## Apprenant
+
+- Un apprenant peut s'inscrire à une ou plusieurs formations.
+- Un apprenant peut s'inscrire à un ou plusieurs modules.
+- Un apprenant peut ne pas s'inscrire à un module si il avais déjà était valider.
+- Un apprenant sera évalué pour chaque module et possèdera un état de fin de module (OK / KO).
+- Un apprenant aura l'aura de recommencer un module si il le rate.
+- Un apprenant peut supprimer sont compte
+
+
+## Formateur 
+
+- Un formateur peut créer un module.
+- Un formateur peut modifier un module.
+- Un formateur peut supprimer un module.
+- Un formateur peut modifier une formation.
+- Un formateur peut supprimer une formation.
+- Un formateur sera charger de la correction des modules.
+- Un formateur peut valider une formation si tous les modules ont étais valider.
+- Un Formateur peut supprimer sont compte
+
+
+## Admin
+
+- Un admin aura le pouvoir de supprimer un compte apprenant.
+- Un admin aura le pouvoir de supprimer un compte Formateur.
+- Un admin aura le pouvoir de supprimer une formation.
+- Un admin aura le pouvoir de supprimer un module.
+
+
+
+
+
+
+
