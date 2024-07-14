@@ -17,7 +17,7 @@
 - Chaque module sera caractérisé par un contenu (textes, images et vidéos).
 - Chaque module sera caractérisé par une durée en heures.
 - Chaque module sera caractérisé par un auteur.
-- Un module aura 4 états : “Non fait”, “En cours”, “Validé”, “Échec”.
+- Un module aura 2 états : “Non fait”, “Validé”,
 - Un module peut faire partie d’une ou plusieurs formations.
 - Un module peut contenir des tags.
 
@@ -25,7 +25,7 @@
 ## Formation 
 
 - Chaque formation sera caractérisée par un numéro de formation.
-- Une formation aura 4 états : “Non faite”, “En cours”, “Validée”, “Échec”.
+- Une formation aura 2 états : “Non faite”, “Validée”.
 - Une formation a besoin que tous ses modules soient validés pour être terminée.
 - Une formation peut contenir un ou plusieurs modules.
 
@@ -69,6 +69,8 @@
 
 ## Admin
 
+- Un admin aura comme caracteristique un mail.
+- Un admin aura comme caracteristique un mot de passe.
 - Un admin aura le pouvoir de supprimer un compte apprenant.
 - Un admin aura le pouvoir de supprimer un compte Formateur.
 - Un admin aura le pouvoir de supprimer une formation.
