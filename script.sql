@@ -1,7 +1,6 @@
-
 CREATE TABLE Admin(
    Id_Admin COUNTER,
-   adress VARCHAR(50) NOT NULL,
+   mail_adress VARCHAR(50) NOT NULL,
    password VARCHAR(50) NOT NULL,
    PRIMARY KEY(Id_Admin)
 );
@@ -18,6 +17,8 @@ CREATE TABLE Learner(
    last_name VARCHAR(25) NOT NULL,
    adress VARCHAR(50) NOT NULL,
    birthday VARCHAR(25) NOT NULL,
+   mail_adress VARCHAR(50) NOT NULL,
+   passeword VARCHAR(50) NOT NULL,
    Id_Admin INT,
    PRIMARY KEY(Id_Learner),
    UNIQUE(registration_number),
@@ -29,6 +30,8 @@ CREATE TABLE Teacher(
    code INT NOT NULL,
    first_name VARCHAR(25) NOT NULL,
    last_name VARCHAR(25) NOT NULL,
+   mail_adress VARCHAR(50) NOT NULL,
+   passeword VARCHAR(50) NOT NULL,
    Id_Admin INT,
    PRIMARY KEY(Id_Teacher),
    FOREIGN KEY(Id_Admin) REFERENCES Admin(Id_Admin)
@@ -42,7 +45,7 @@ CREATE TABLE Modules(
    duration INT NOT NULL,
    tag VARCHAR(50) NOT NULL,
    auteur VARCHAR(25) NOT NULL,
-   state LOGICAL,
+   states LOGICAL,
    Id_Admin INT,
    Id_Teacher INT NOT NULL,
    PRIMARY KEY(Id_Modules),
@@ -53,6 +56,7 @@ CREATE TABLE Modules(
 CREATE TABLE Education(
    Id_Education COUNTER,
    number_education VARCHAR(50) NOT NULL,
+   states LOGICAL NOT NULL,
    Id_Admin INT,
    Id_Teacher INT NOT NULL,
    PRIMARY KEY(Id_Education),
