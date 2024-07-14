@@ -1,61 +1,97 @@
-CREATE TABLE Formation(
-   id_formation COUNTER,
-   PRIMARY KEY(id_formation)
+CREATE TABLE Admin(
+   Id_Admin COUNTER,
+   adress VARCHAR(50) NOT NULL,
+   password VARCHAR(50) NOT NULL,
+   PRIMARY KEY(Id_Admin)
 );
 
-CREATE TABLE Apprennant(
-   id_apprennant COUNTER,
-   numero_inscription VARCHAR(50) NOT NULL,
-   nom VARCHAR(50) NOT NULL,
-   prénom VARCHAR(50) NOT NULL,
-   adresse VARCHAR(50) NOT NULL,
-   date_naissance VARCHAR(50) NOT NULL,
-   PRIMARY KEY(id_apprennant),
-   UNIQUE(numero_inscription)
+CREATE TABLE Visitor(
+   Id_Visitor COUNTER,
+   PRIMARY KEY(Id_Visitor)
 );
 
-CREATE TABLE Formateur(
-   id_formateur COUNTER,
-   code VARCHAR(50) NOT NULL,
-   nom VARCHAR(50) NOT NULL,
-   prénom VARCHAR(50) NOT NULL,
-   PRIMARY KEY(id_formateur)
+CREATE TABLE Learner(
+   Id_Learner COUNTER,
+   numero_inscription INT NOT NULL,
+   first_name VARCHAR(25) NOT NULL,
+   last_name VARCHAR(25) NOT NULL,
+   adress VARCHAR(50) NOT NULL,
+   birthday VARCHAR(25) NOT NULL,
+   Id_Admin INT,
+   PRIMARY KEY(Id_Learner),
+   UNIQUE(numero_inscription),
+   FOREIGN KEY(Id_Admin) REFERENCES Admin(Id_Admin)
+);
+
+CREATE TABLE Teacher(
+   Id_Teacher COUNTER,
+   code INT NOT NULL,
+   first_name VARCHAR(25) NOT NULL,
+   last_name VARCHAR(25) NOT NULL,
+   Id_Admin INT,
+   PRIMARY KEY(Id_Teacher),
+   FOREIGN KEY(Id_Admin) REFERENCES Admin(Id_Admin)
 );
 
 CREATE TABLE Modules(
-   id_modules COUNTER,
-   numero_de_module VARCHAR(50) NOT NULL,
-   intitulé VARCHAR(50) NOT NULL,
-   objectif_pédagogique VARCHAR(50) NOT NULL,
-   contenu TEXT NOT NULL,
+   Id_Modules COUNTER,
+   module_number INT NOT NULL,
+   titled VARCHAR(50) NOT NULL,
+   educational_objective VARCHAR(50) NOT NULL,
+   duration INT NOT NULL,
    tag VARCHAR(50) NOT NULL,
-   auteur VARCHAR(50) NOT NULL,
-   durée TIME NOT NULL,
-   id_formateur INT NOT NULL,
-   PRIMARY KEY(id_modules),
-   FOREIGN KEY(id_formateur) REFERENCES Formateur(id_formateur)
+   auteur VARCHAR(25) NOT NULL,
+   state LOGICAL,
+   Id_Admin INT,
+   Id_Teacher INT NOT NULL,
+   PRIMARY KEY(Id_Modules),
+   FOREIGN KEY(Id_Admin) REFERENCES Admin(Id_Admin),
+   FOREIGN KEY(Id_Teacher) REFERENCES Teacher(Id_Teacher)
 );
 
-CREATE TABLE Contenir(
-   id_formation INT,
-   id_modules INT,
-   PRIMARY KEY(id_formation, id_modules),
-   FOREIGN KEY(id_formation) REFERENCES Formation(id_formation),
-   FOREIGN KEY(id_modules) REFERENCES Modules(id_modules)
+CREATE TABLE Education(
+   Id_Education COUNTER,
+   number_education VARCHAR(50) NOT NULL,
+   Frontend_javascript VARCHAR(50) NOT NULL,
+   github VARCHAR(50) NOT NULL,
+   Devops VARCHAR(50) NOT NULL,
+   Id_Admin INT,
+   Id_Teacher INT NOT NULL,
+   PRIMARY KEY(Id_Education),
+   FOREIGN KEY(Id_Admin) REFERENCES Admin(Id_Admin),
+   FOREIGN KEY(Id_Teacher) REFERENCES Teacher(Id_Teacher)
 );
 
-CREATE TABLE Avoir(
-   id_formation INT,
-   id_apprennant INT,
-   PRIMARY KEY(id_formation, id_apprennant),
-   FOREIGN KEY(id_formation) REFERENCES Formation(id_formation),
-   FOREIGN KEY(id_apprennant) REFERENCES Apprennant(id_apprennant)
+CREATE TABLE Content(
+   Id_Content COUNTER,
+   text VARCHAR(50) NOT NULL,
+   picture VARCHAR(50) NOT NULL,
+   vidéo VARCHAR(50) NOT NULL,
+   Id_Modules INT,
+   PRIMARY KEY(Id_Content),
+   FOREIGN KEY(Id_Modules) REFERENCES Modules(Id_Modules)
 );
 
-CREATE TABLE Suivre(
-   id_apprennant INT,
-   id_modules INT,
-   PRIMARY KEY(id_apprennant, id_modules),
-   FOREIGN KEY(id_apprennant) REFERENCES Apprennant(id_apprennant),
-   FOREIGN KEY(id_modules) REFERENCES Modules(id_modules)
+CREATE TABLE have(
+   Id_Modules INT,
+   Id_Education INT,
+   PRIMARY KEY(Id_Modules, Id_Education),
+   FOREIGN KEY(Id_Modules) REFERENCES Modules(Id_Modules),
+   FOREIGN KEY(Id_Education) REFERENCES Education(Id_Education)
+);
+
+CREATE TABLE study(
+   Id_Modules INT,
+   Id_Learner INT,
+   PRIMARY KEY(Id_Modules, Id_Learner),
+   FOREIGN KEY(Id_Modules) REFERENCES Modules(Id_Modules),
+   FOREIGN KEY(Id_Learner) REFERENCES Learner(Id_Learner)
+);
+
+CREATE TABLE take_part(
+   Id_Education INT,
+   Id_Learner INT,
+   PRIMARY KEY(Id_Education, Id_Learner),
+   FOREIGN KEY(Id_Education) REFERENCES Education(Id_Education),
+   FOREIGN KEY(Id_Learner) REFERENCES Learner(Id_Learner)
 );
