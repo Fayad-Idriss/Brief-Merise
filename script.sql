@@ -1,3 +1,4 @@
+
 CREATE TABLE Admin(
    Id_Admin COUNTER,
    adress VARCHAR(50) NOT NULL,
@@ -12,14 +13,14 @@ CREATE TABLE Visitor(
 
 CREATE TABLE Learner(
    Id_Learner COUNTER,
-   numero_inscription INT NOT NULL,
+   registration_number INT NOT NULL,
    first_name VARCHAR(25) NOT NULL,
    last_name VARCHAR(25) NOT NULL,
    adress VARCHAR(50) NOT NULL,
    birthday VARCHAR(25) NOT NULL,
    Id_Admin INT,
    PRIMARY KEY(Id_Learner),
-   UNIQUE(numero_inscription),
+   UNIQUE(registration_number),
    FOREIGN KEY(Id_Admin) REFERENCES Admin(Id_Admin)
 );
 
@@ -52,9 +53,6 @@ CREATE TABLE Modules(
 CREATE TABLE Education(
    Id_Education COUNTER,
    number_education VARCHAR(50) NOT NULL,
-   Frontend_javascript VARCHAR(50) NOT NULL,
-   github VARCHAR(50) NOT NULL,
-   Devops VARCHAR(50) NOT NULL,
    Id_Admin INT,
    Id_Teacher INT NOT NULL,
    PRIMARY KEY(Id_Education),
