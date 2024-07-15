@@ -2,7 +2,7 @@
 
 
 
-## Visiteur. 
+## Visiteur 
 
 - Un visiteur peut visiter l’application sans s’inscrire.
 - Un visiteur peut s’inscrire sur l’application et devient alors un apprenant ou un formateur et reçoit un numéro d’inscription unique.
